@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8f1eb;
+  --fg: #2b1a12;
+  --muted: #6f4d3a;
+  --card: #fffaf5;
+  --border: #d6c1b2;
+  --accent: #5e3b28;
+  --accent-contrast: #fff8f1;
+  --font-sans: "Manrope";
+  --font-mono: "JetBrains Mono";
+}
+
+.dark {
+  --bg: #150f0c;
+  --fg: #f4e7dc;
+  --muted: #c3ac9b;
+  --card: #201612;
+  --border: #4a3428;
+  --accent: #b67a4d;
+  --accent-contrast: #180f0b;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  @apply m-0 p-0;
+}
+
+body {
+  @apply bg-bg text-fg antialiased;
+  background-image: radial-gradient(circle at top right, rgb(182 122 77 / 0.12), transparent 45%);
+}
+
+a,
+a:visited,
+a:active {
+  @apply text-inherit;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+pre[data-theme] {
+  @apply overflow-x-auto rounded-xl border border-border p-4 text-sm;
+}
+
+pre[data-theme] code {
+  @apply font-mono;
+}

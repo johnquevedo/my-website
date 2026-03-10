@@ -1,0 +1,81 @@
+{
+  "name": "John Quevedo",
+  "contact": "(475) 777-8330 | john.quevedo@yale.edu | https://linkedin.com/in/john-quevedo | https://github.com/johnquevedo",
+  "education": [
+    "Yale University — New Haven, CT",
+    "Bachelor of Science in Computer Science and Mathematics, GPA: 3.83 — Expected May 2028",
+    "Awards/Honors: Jane Street Unboxed Scholar, Hispanic Heritage Foundation Fellow",
+    "Relevant Coursework: Intermediate Machine Learning, Algorithms, Data Structures and Programming Techniques, Theory of Statistics, Probability Theory, Discrete Mathematics, Linear Algebra, Real Analysis"
+  ],
+  "technicalSkills": [
+    "Programming Languages: Python, C++, Java, JavaScript, TypeScript, SQL",
+    "Software: Git, Linux/Unix, GDB, NumPy, pandas, scikit-learn, PyTorch, TensorFlow, Docker, PostgreSQL, Jupyter"
+  ],
+  "workExperience": [
+    {
+      "organization": "Yale University — New Haven, CT",
+      "role": "Undergraduate Researcher, Transformer Reasoning — Feb 2026 – Present",
+      "bullets": [
+        "Ran controlled training experiments to analyze emergence of in-context learning and chain-of-thought reasoning.",
+        "Built evaluation pipelines to test effects of data distribution and curriculum schedules on reasoning.",
+        "Implemented looped transformer variants and measured changes in iterative reasoning behavior."
+      ]
+    },
+    {
+      "organization": "Yale University — New Haven, CT",
+      "role": "Undergraduate Researcher, Parallel Graph Algorithms — Oct 2024 – Present",
+      "bullets": [
+        "Designed and implemented parallel batch-dynamic k-clique counting for sparse graphs on multicore systems.",
+        "Optimized parallel hash tables and set intersections to reduce update latency and improve scaling.",
+        "Cut memory by replacing quadratic intermediates with arboricity-aware sparse representations."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Full-Stack Social Reading Platform (Next.js, TypeScript, Tailwind CSS, PostgreSQL, Prisma, NextAuth, Docker)",
+      "bullets": [
+        "Built a full-stack social reading app with search, personal bookshelves, reviews, follows, and activity tracking.",
+        "Designed PostgreSQL/Prisma schema and APIs for authentication, notifications, comments, likes, and follows.",
+        "Implemented responsive UI and secure authentication, enabling persistent user profiles and social interactions."
+      ]
+    },
+    {
+      "title": "Movie Recommendation System (Python, Streamlit, Pandas, NumPy, SciPy, implicit)",
+      "bullets": [
+        "Built a personalized movie recommendation system using collaborative filtering on the MovieLens 100K dataset.",
+        "Increased catalog coverage from 3.9% to 37.0% of movies.",
+        "Deployed an interactive Streamlit app that updates recommendations in real time from user-ratings."
+      ]
+    },
+    {
+      "title": "Probabilistic Stock Volatility Forecasting Dashboard (Python, PyTorch, GPyTorch, yfinance)",
+      "bullets": [
+        "Built a machine learning pipeline to forecast 5-day stock volatility using historical market data.",
+        "Improved forecast accuracy by 23–28% compared to simple baseline methods across SPY, QQQ, and AAPL.",
+        "Shipped a Streamlit dashboard for visualizing forecasts, uncertainty bands, and model performance."
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "organization": "Management Leadership for Tomorrow — Washington, DC",
+      "role": "Career Preparation Fellow — Jan 2024 – Present",
+      "bullets": [
+        "Accepted into a selective 18-month professional development program that accelerates the career growth of emerging leaders through structured coaching, mentorship, and targeted skill-building.",
+        "Engage with leading partner organizations (e.g., LinkedIn, Bloomberg, and Deloitte) to gain industry exposure and insight into tech-talent pathways."
+      ]
+    },
+    {
+      "organization": "MATHCOUNTS Foundation — New Haven, CT",
+      "role": "Volunteer Coach — Sep 2020 – Present",
+      "bullets": [
+        "Coached multiple Connecticut middle school teams during the competition season.",
+        "Led weekly practices and worked with students on challenging competition problems."
+      ]
+    }
+  ],
+  "additionalSkillsAndInterests": [
+    "Fluent in Spanish, machine learning systems, distributed systems, performance engineering, large-scale data pipelines."
+  ]
+}
