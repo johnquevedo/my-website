@@ -118,10 +118,12 @@ export default function WorkPage() {
                 <p>June 2026 to present</p>
               </div>
               <p>
-                Designed a parallel graph algorithm that updates clique counts
-                after batches of edge changes. Optimized work partitioning for
-                up to a 50.8x speedup on 64 cores and resolved a concurrency
-                race through systematic correctness audits.
+                Designed and implemented a novel parallel graph algorithm in
+                C++ that updates clique counts after batches of edge insertions
+                and deletions, avoiding a full recount after each batch.
+                Optimized clique-counting routines through parallel work
+                partitioning, achieving up to a 50.8x speedup on 64 cores over
+                single-threaded execution.
               </p>
             </article>
           </div>

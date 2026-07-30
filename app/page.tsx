@@ -54,9 +54,9 @@ export default function Home() {
               <p className="current-place">Yale University</p>
               <h2>Algorithms Research Intern</h2>
               <p>
-                Designing and implementing parallel graph algorithms for
-                dynamic clique counting, with an emphasis on correctness and
-                multicore performance.
+                Designed and implemented a novel parallel graph algorithm in
+                C++ that updates clique counts after batches of edge insertions
+                and deletions, avoiding a full recount after each batch.
               </p>
             </article>
           </div>
