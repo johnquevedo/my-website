@@ -29,7 +29,9 @@ test("server-renders the finished portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /John Quevedo/);
-  assert.match(html, /Software engineer building scalable backend systems/);
+  assert.match(html, /Software Engineer/);
+  assert.match(html, /Online Payment Repair/);
+  assert.match(html, /Training Data Auditor/);
   assert.match(html, /View my work/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | John Quevedo",
   },
   description:
-    "John Quevedo is a software engineer and Yale student focused on backend engineering, distributed systems, and machine learning.",
+    "John Quevedo studies Computer Science and Mathematics at Yale University, focusing on backend engineering, distributed systems, and machine learning.",
   openGraph: {
     title: "John Quevedo | Software Engineer",
     description:

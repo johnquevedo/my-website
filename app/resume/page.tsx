@@ -3,8 +3,8 @@ import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Résumé",
-  description: "John Quevedo's software engineering résumé.",
+  title: "Resume",
+  description: "John Quevedo's software engineering resume.",
 };
 
 export default function ResumePage() {
@@ -13,10 +13,7 @@ export default function ResumePage() {
       <SiteHeader />
       <main className="page-shell inner-page resume-page">
         <header className="resume-heading">
-          <div>
-            <p className="eyebrow">Résumé</p>
-            <h1>Experience and education.</h1>
-          </div>
+          <h1>Resume</h1>
           <div className="resume-actions">
             <a
               className="quiet-button"
@@ -37,7 +34,7 @@ export default function ResumePage() {
         </header>
         <div className="resume-frame">
           <iframe
-            title="John Quevedo résumé"
+            title="John Quevedo resume"
             src="/resume/John_Quevedo_Resume.pdf"
           />
         </div>

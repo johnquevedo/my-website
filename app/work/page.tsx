@@ -74,11 +74,7 @@ export default function WorkPage() {
       <main className="page-shell inner-page">
         <header className="page-intro">
           <p className="eyebrow">Work</p>
-          <h1>Selected engineering projects.</h1>
-          <p>
-            Backend systems and machine learning infrastructure designed around
-            reliability, measurable performance, and clear failure behavior.
-          </p>
+          <h1>Selected projects.</h1>
         </header>
 
         <section className="project-list" aria-label="Selected projects">

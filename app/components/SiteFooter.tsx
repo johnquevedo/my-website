@@ -3,7 +3,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="page-shell footer-inner">
         <div>
-          <p className="footer-heading">Let&apos;s talk.</p>
+          <p className="footer-name">John Quevedo</p>
           <a className="footer-email" href="mailto:john.quevedo@yale.edu">
             john.quevedo@yale.edu
           </a>
@@ -28,10 +28,9 @@ export function SiteFooter() {
             target="_blank"
             rel="noreferrer"
           >
-            Résumé
+            Resume
           </a>
         </div>
-        <p className="footer-note">Built with care in 2026.</p>
       </div>
     </footer>
   );
