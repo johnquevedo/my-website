@@ -119,9 +119,9 @@ export default function Home() {
 
         <section className="home-work page-shell" id="work">
           <div className="home-work-heading">
-            <h2>Selected projects</h2>
+            <h2>Featured projects</h2>
           </div>
-          <div className="project-list" aria-label="Selected projects">
+          <div className="project-list" aria-label="Featured projects">
             {projects.map((project) => (
               <article className="project-card" id={project.id} key={project.id}>
                 <div className="project-main">
