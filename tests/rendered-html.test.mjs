@@ -33,16 +33,6 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /Online Payment Repair/);
   assert.match(html, /Training Data Auditor/);
   assert.match(html, /View my work/);
+  assert.doesNotMatch(html, /project-number/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
-});
-
-test("server-renders the work page", async () => {
-  const response = await render("/work");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /CI Failure Capture and Replay/);
-  assert.match(html, /Online Payment Repair/);
-  assert.match(html, /CPU and GPU Inference Tuning/);
-  assert.match(html, /Training Data Auditor/);
 });

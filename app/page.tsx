@@ -3,6 +3,61 @@ import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
+const projects = [
+  {
+    id: "ci-failure-replay",
+    title: "CI Failure Capture and Replay",
+    description:
+      "Reproduces CI failures by preserving both code and runtime state. Built with idempotent jobs, lease-based queues, checkpointed workers, and isolated replay containers.",
+    result: "Completed 172 of 172 controlled replays.",
+    technologies: [
+      "Go",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+    ],
+    href: "https://github.com/johnquevedo/ci-failure-replay",
+  },
+  {
+    id: "payment-repair",
+    title: "Online Payment Repair",
+    description:
+      "Traces corrupted payments to responsible code or configuration versions, then generates auditable repair plans with concurrency protection.",
+    result:
+      "Repaired 100,000 records at 865 records per second with no ledger imbalances.",
+    technologies: ["Java", "Kafka", "PostgreSQL", "Spark", "Kubernetes"],
+    href: "https://github.com/johnquevedo/online-payment-repair",
+  },
+  {
+    id: "inference-tuning",
+    title: "CPU and GPU Inference Tuning",
+    description:
+      "Selects hardware-specific inference configurations by testing quantization, pruning, compilation, batching, and runtime choices under quality and latency limits.",
+    result: "Reduced median latency by 79.6% with no measured quality loss.",
+    technologies: [
+      "Python",
+      "PyTorch",
+      "CUDA",
+      "TensorRT",
+      "ONNX Runtime",
+      "Ray",
+    ],
+    href: "https://github.com/johnquevedo/cpu-gpu-inference-tuning",
+  },
+  {
+    id: "training-data-auditor",
+    title: "Training Data Auditor",
+    description:
+      "Combines six label, similarity, and model-based signals into explainable review queues and auditable dataset patches.",
+    result:
+      "Profiled 127,600 rows in 9.8 seconds and achieved 91.3% adjudicated precision.",
+    technologies: ["Python", "PyTorch", "Hugging Face", "Spark", "FAISS"],
+    href: "https://github.com/johnquevedo/training-data-auditor",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -18,7 +73,7 @@ export default function Home() {
               machine learning.
             </p>
             <div className="hero-links" aria-label="Primary links">
-              <Link className="text-link" href="/work">
+              <Link className="text-link" href="#work">
                 View my work <span aria-hidden="true">↗</span>
               </Link>
               <a
@@ -62,47 +117,34 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="home-work page-shell">
+        <section className="home-work page-shell" id="work">
           <div className="home-work-heading">
             <h2>Selected projects</h2>
           </div>
-          <div className="project-preview-list">
-            <Link href="/work#ci-failure-replay" className="project-preview">
-              <span>01</span>
-              <div>
-                <h3>CI Failure Capture and Replay</h3>
-              </div>
-              <span className="preview-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </Link>
-            <Link href="/work#payment-repair" className="project-preview">
-              <span>02</span>
-              <div>
-                <h3>Online Payment Repair</h3>
-              </div>
-              <span className="preview-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </Link>
-            <Link href="/work#inference-tuning" className="project-preview">
-              <span>03</span>
-              <div>
-                <h3>CPU and GPU Inference Tuning</h3>
-              </div>
-              <span className="preview-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </Link>
-            <Link href="/work#training-data-auditor" className="project-preview">
-              <span>04</span>
-              <div>
-                <h3>Training Data Auditor</h3>
-              </div>
-              <span className="preview-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </Link>
+          <div className="project-list" aria-label="Selected projects">
+            {projects.map((project) => (
+              <article className="project-card" id={project.id} key={project.id}>
+                <div className="project-main">
+                  <h3>{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <p className="project-result">{project.result}</p>
+                  <ul className="tech-list" aria-label="Technologies">
+                    {project.technologies.map((technology) => (
+                      <li key={technology}>{technology}</li>
+                    ))}
+                  </ul>
+                </div>
+                <a
+                  className="project-link"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
           </div>
         </section>
       </main>

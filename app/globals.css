@@ -65,24 +65,9 @@ a {
   min-height: 76px;
 }
 
-.wordmark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 1px solid var(--cream);
-  border-radius: 50%;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.95rem;
-  letter-spacing: -0.03em;
-  transition:
-    background 180ms ease,
-    color 180ms ease;
-}
-
-.wordmark:hover {
-  background: var(--cream);
-  color: var(--chocolate);
+.home-link {
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 nav {
@@ -137,8 +122,7 @@ nav a:focus-visible::after {
 
 .eyebrow,
 .section-label,
-.current-place,
-.project-number {
+.current-place {
   margin: 0;
   color: var(--cocoa);
   font-size: 0.72rem;
@@ -257,6 +241,7 @@ p {
 }
 
 .home-work {
+  scroll-margin-top: 76px;
   padding-top: 80px;
   padding-bottom: 110px;
 }
@@ -274,55 +259,6 @@ p {
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.05;
-}
-
-.project-preview-list {
-  border-top: 1px solid var(--cream);
-}
-
-.project-preview {
-  display: grid;
-  grid-template-columns: 48px 1fr auto;
-  gap: 26px;
-  align-items: start;
-  padding: 30px 18px 32px 0;
-  border-bottom: 1px solid var(--line);
-  transition:
-    background 180ms ease,
-    padding 180ms ease;
-}
-
-.project-preview:hover {
-  padding-right: 18px;
-  padding-left: 18px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.project-preview > span:first-child {
-  color: var(--milk);
-  font-size: 0.78rem;
-}
-
-.project-preview h3 {
-  margin: 0 0 6px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-}
-
-.project-preview p {
-  margin: 0;
-  color: var(--cocoa);
-}
-
-.preview-arrow {
-  font-size: 1.2rem;
-  transition: transform 180ms ease;
-}
-
-.project-preview:hover .preview-arrow {
-  transform: translate(3px, -3px);
 }
 
 .quiet-button {
@@ -369,7 +305,7 @@ p {
 
 .project-card {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: clamp(24px, 4vw, 54px);
   align-items: start;
   padding: 46px 0 52px;
@@ -378,6 +314,15 @@ p {
 }
 
 .project-main h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.8vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.project-main h3 {
   margin: 0 0 16px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 3.8vw, 3.8rem);
@@ -599,11 +544,11 @@ p {
   }
 
   .project-card {
-    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .project-link {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: start;
   }
 
@@ -624,11 +569,6 @@ p {
 }
 
 @media (max-width: 520px) {
-  .wordmark {
-    width: 38px;
-    height: 38px;
-  }
-
   nav {
     gap: 14px;
   }
@@ -646,21 +586,11 @@ p {
     gap: 20px;
   }
 
-  .project-preview {
-    grid-template-columns: 32px 1fr;
-    gap: 14px;
-  }
-
-  .preview-arrow {
-    display: none;
-  }
-
   .project-card {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .project-number,
   .project-link {
     grid-column: 1;
   }
