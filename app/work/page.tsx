@@ -124,21 +124,6 @@ export default function WorkPage() {
                 race through systematic correctness audits.
               </p>
             </article>
-            <article>
-              <div className="experience-heading">
-                <div>
-                  <h2>Generative AI Software Engineer</h2>
-                  <p>Management Leadership for Tomorrow</p>
-                </div>
-                <p>June 2026 to present</p>
-              </div>
-              <p>
-                Built a financial document analysis platform using serverless
-                AWS infrastructure, SEC EDGAR data, retrieval, and language
-                models. Developed the filing ingestion path and connected it to
-                an end-to-end web experience.
-              </p>
-            </article>
           </div>
         </section>
       </main>
