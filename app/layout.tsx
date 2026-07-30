@@ -1,84 +1,47 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
-
-import { AnalyticsProvider } from "@/components/analytics";
-import { Navbar } from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { siteConfig } from "@/lib/site-config";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://johnfquevedo.com"),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.title}`,
-    template: `%s | ${siteConfig.name}`
+    default: "John Quevedo | Software Engineer",
+    template: "%s | John Quevedo",
   },
-  description: siteConfig.description,
-  alternates: { canonical: "/" },
+  description:
+    "John Quevedo is a software engineer and Yale student focused on backend engineering, distributed systems, and machine learning.",
   openGraph: {
-    type: "website",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.title}`,
-    description: siteConfig.description,
+    title: "John Quevedo | Software Engineer",
+    description:
+      "Backend systems, distributed systems, and machine learning.",
+    url: "https://johnfquevedo.com",
+    siteName: "John Quevedo",
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent(siteConfig.name)}`,
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: siteConfig.name
-      }
-    ]
+        alt: "John Quevedo, Software Engineer",
+      },
+    ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | ${siteConfig.title}`,
-    description: siteConfig.description,
-    images: [`/api/og?title=${encodeURIComponent(siteConfig.name)}`]
-  }
+    title: "John Quevedo | Software Engineer",
+    description:
+      "Backend systems, distributed systems, and machine learning.",
+    images: ["/og.png"],
+  },
 };
 
-const personLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteConfig.name,
-  email: siteConfig.links.email.replace("mailto:", ""),
-  url: siteConfig.url,
-  sameAs: [siteConfig.links.github, siteConfig.links.linkedin]
-};
-
-const websiteLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: siteConfig.name,
-  url: siteConfig.url,
-  description: siteConfig.description
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <a className="sr-only focus:not-sr-only" href="#content">
-            Skip to content
-          </a>
-          <Navbar />
-          <main className="min-h-screen" id="content">
-            {children}
-          </main>
-          <AnalyticsProvider />
-        </ThemeProvider>
-        <script
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
-          type="application/ld+json"
-        />
-        <script
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
-          type="application/ld+json"
-        />
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

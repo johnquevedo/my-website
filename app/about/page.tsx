@@ -1,55 +1,70 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-import { Contact } from "@/components/contact";
-import { siteConfig } from "@/lib/site-config";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About John Quevedo and current engineering interests."
+  description:
+    "About John Quevedo, a software engineer and Computer Science and Mathematics student at Yale University.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold tracking-tight">About</h1>
-      <p className="mt-5 text-base leading-relaxed text-fg">
-        I am a computer science and mathematics student at Yale University interested
-        in machine learning systems, algorithms, and how modern AI models learn and
-        reason. My current work includes research on transformer reasoning and parallel
-        graph algorithms, and I am especially interested in problems that connect theory
-        with efficient, scalable systems.
-      </p>
-      <p className="mt-4 text-base leading-relaxed text-fg">
-        Outside of academics, I love dancing, playing the piano, playing volleyball,
-        and hiking. I also enjoy researching pure math, especially topics such as the
-        geometry of complex abelian varieties and broader questions in algebra,
-        geometry, and the mathematics of data.
-      </p>
-      <div className="mt-6 flex flex-wrap gap-4 text-sm">
-        <Link
-          className="text-accent hover:underline"
-          href={siteConfig.links.github}
-          rel="noreferrer"
-          target="_blank"
-        >
-          GitHub
-        </Link>
-        <Link
-          className="text-accent hover:underline"
-          href={siteConfig.links.linkedin}
-          rel="noreferrer"
-          target="_blank"
-        >
-          LinkedIn
-        </Link>
-        <Link className="text-accent hover:underline" href={siteConfig.links.phone}>
-          (475) 777-8330
-        </Link>
-      </div>
-      <div className="mt-10">
-        <Contact />
-      </div>
-    </div>
+    <>
+      <SiteHeader />
+      <main className="page-shell inner-page">
+        <header className="page-intro about-intro">
+          <p className="eyebrow">About</p>
+          <h1>I like understanding how complicated things behave.</h1>
+        </header>
+
+        <section className="about-grid">
+          <div className="about-lead">
+            <p>
+              I&apos;m John, a Computer Science and Mathematics student at Yale
+              University. I&apos;m drawn to engineering problems where
+              correctness, performance, and real-world constraints all matter.
+            </p>
+          </div>
+          <div className="about-body">
+            <p>
+              My recent work spans parallel graph algorithms, distributed
+              backend systems, machine learning infrastructure, and generative
+              AI applications. I enjoy moving between theory and
+              implementation, especially when careful measurement can replace
+              guesswork.
+            </p>
+            <p>
+              I also care about making technical work understandable. The best
+              systems are not only fast or reliable. Their behavior, tradeoffs,
+              and limitations can be explained clearly.
+            </p>
+          </div>
+        </section>
+
+        <section className="interests section-rule">
+          <div>
+            <p className="section-label">Away from the screen</p>
+          </div>
+          <div>
+            <p className="interests-copy">
+              I play piano and guitar, read literature, and am learning
+              photography, drawing, and painting. I&apos;m fluent in Spanish
+              and especially interested in music, cities, landscapes, and the
+              ways art changes how we pay attention.
+            </p>
+            <ul className="interest-list" aria-label="Personal interests">
+              <li>Piano</li>
+              <li>Guitar</li>
+              <li>Literature</li>
+              <li>Photography</li>
+              <li>Drawing</li>
+              <li>Painting</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
